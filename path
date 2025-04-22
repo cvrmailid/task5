@@ -1,0 +1,19 @@
+const path = require("path");
+const filePath = "/file.txt";
+
+// Get the directory name
+console.log("Directory Name:", path.dirname(filePath));
+
+// Get the base name (file name with extension)
+console.log("Base Name:", path.basename(filePath));
+
+// Get the file extension
+console.log("File Extension:", path.extname(filePath));
+
+// Join paths using path.join
+const joinedPath = path.join("/users", "john", "documents", "file.txt");
+console.log("Joined Path:", joinedPath);  // Outputs: /users/john/documents/file.txt
+
+// Resolve the absolute path using path.resolve
+const resolvedPath = path.resolve("/users", "john", "documents", "file.txt");
+console.log("Resolved Path:", resolvedPath);  // Outputs: /users/john/documents/file.txt
