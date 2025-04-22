@@ -1,0 +1,12 @@
+const util = require("util");
+const setTimeoutPromise = util.promisify(setTimeout);
+
+async function delay() {
+  console.log("waiting...");
+  await setTimeoutPromise(2000);
+  console.log("Done!");
+}
+
+delay();
+const formatted = util.format("Hello, %s!", "Alice");
+console.log(formatted);
